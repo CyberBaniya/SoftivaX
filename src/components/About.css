@@ -1,0 +1,1036 @@
+/* ============================================================================
+   SOFTIVAX ABOUT WOW-FACTOR PAGE STYLES
+   ============================================================================ */
+
+.about-wow-experience {
+  width: 100%;
+  background-color: #0B0F14;
+  color: #F5F1EA;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 4rem;
+}
+
+.abt-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.gold-gradient-text,
+.gold-glow,
+.gold-text {
+  color: #D4A574;
+  background: linear-gradient(135deg, #F5F1EA 0%, #D4A574 60%, #B88652 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-head-center {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.abt-eyebrow-text {
+  color: #D4A574;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.section-main-title {
+  color: #F5F1EA;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.section-sub-text {
+  color: #9CA3AF;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ============================================================================
+   1. CINEMATIC HERO SECTION
+   ============================================================================ */
+.abt-hero-section {
+  padding: 6rem 0 4rem;
+  position: relative;
+  background: radial-gradient(circle at 70% 30%, rgba(212, 165, 116, 0.08) 0%, transparent 65%);
+}
+
+.abt-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.abt-eyebrow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(212, 165, 116, 0.1);
+  border: 1px solid rgba(212, 165, 116, 0.25);
+  color: #D4A574;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  padding: 0.4rem 1.1rem;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+}
+
+.badge-pulse {
+  width: 6px;
+  height: 6px;
+  background-color: #D4A574;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #D4A574;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.abt-hero-headline {
+  font-size: clamp(34px, 4.2vw, 56px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -1px;
+  color: #F5F1EA;
+  margin-bottom: 1.25rem;
+}
+
+.abt-hero-subtext {
+  color: #9CA3AF;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+}
+
+.abt-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-hero {
+  padding: 1rem 2rem !important;
+  font-size: 1rem !important;
+}
+
+/* COMMAND CENTER HERO VISUAL */
+.abt-command-center-card {
+  background: #11161D;
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.1, 1, 0.1, 1);
+}
+
+.command-bar {
+  background: #0E1319;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.command-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dot-close { background: #EF4444; }
+.dot-min { background: #F59E0B; }
+.dot-max { background: #10B981; }
+
+.command-title {
+  color: #9CA3AF;
+  font-size: 0.75rem;
+  font-family: monospace;
+}
+
+.command-status {
+  color: #10B981;
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.command-body {
+  padding: 1.5rem;
+  background: #0B0F14;
+}
+
+.code-editor-header {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.file-tab {
+  color: #6B7280;
+  font-size: 0.75rem;
+  font-family: monospace;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.file-tab.active {
+  background: rgba(212, 165, 116, 0.15);
+  color: #D4A574;
+}
+
+.code-editor-lines {
+  font-family: monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.code-line {
+  display: flex;
+  gap: 1rem;
+}
+
+.ln { color: #4B5563; }
+.kw { color: #3B82F6; }
+.str { color: #10B981; }
+.cmt { color: #6B7280; font-style: italic; }
+
+.command-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.metric-box {
+  background: rgba(17, 22, 29, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.m-label {
+  color: #6B7280;
+  font-size: 0.65rem;
+  font-family: monospace;
+}
+
+.m-val {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.text-green { color: #10B981; }
+.text-gold { color: #D4A574; }
+.text-blue { color: #60A5FA; }
+
+.floating-system-badge {
+  background: rgba(14, 19, 25, 0.95);
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  color: #D4A574;
+  font-size: 0.72rem;
+  font-family: monospace;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.badge-glow-dot {
+  width: 6px;
+  height: 6px;
+  background: #D4A574;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #D4A574;
+}
+
+/* ============================================================================
+   2. "THE IDEA" SECTION
+   ============================================================================ */
+.abt-idea-section {
+  padding: 4rem 0;
+  background: radial-gradient(circle at 50% 50%, rgba(17, 22, 29, 0.9) 0%, transparent 100%);
+}
+
+.idea-statement-box {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.idea-big-text {
+  font-size: clamp(28px, 3.8vw, 48px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: #F5F1EA;
+  margin-bottom: 1rem;
+}
+
+.idea-sub-text {
+  color: #9CA3AF;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.idea-visual-showcase {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.idea-showcase-window {
+  background: #11161D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.showcase-bar {
+  background: #0E1319;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.showcase-dot {
+  width: 8px;
+  height: 8px;
+  background: #D4A574;
+  border-radius: 50%;
+}
+
+.showcase-title {
+  color: #9CA3AF;
+  font-size: 0.78rem;
+  font-family: monospace;
+}
+
+.showcase-content {
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #0B0F14;
+}
+
+.showcase-card {
+  flex: 1;
+  background: #11161D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.sc-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.sc-title {
+  color: #F5F1EA;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.sc-desc {
+  color: #9CA3AF;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.showcase-divider-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  position: relative;
+}
+
+.flow-arrow {
+  color: #D4A574;
+  font-size: 1.2rem;
+}
+
+/* ============================================================================
+   3. THE SOFTIVAX PHILOSOPHY
+   ============================================================================ */
+.abt-philosophy-section {
+  padding: 5rem 0;
+}
+
+.philosophy-panels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.philosophy-card {
+  background: #11161D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.25rem 1.75rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophy-card:hover,
+.philosophy-card.active {
+  transform: translateY(-8px);
+  border-color: #D4A574;
+  box-shadow: 0 16px 40px rgba(212, 165, 116, 0.2);
+  background: #161D26;
+}
+
+.ph-number {
+  color: #D4A574;
+  font-size: 1.1rem;
+  font-family: monospace;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ph-title {
+  color: #F5F1EA;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  margin-bottom: 0.6rem;
+}
+
+.ph-quote {
+  color: #D4A574;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.ph-desc {
+  color: #9CA3AF;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.ph-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ph-tag {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #D1D5DB;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+.ph-active-bar {
+  margin-top: 1.25rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+.active-line-gold {
+  height: 100%;
+  width: 100%;
+  background: #D4A574;
+  animation: lineExpand 0.4s ease forwards;
+}
+
+@keyframes lineExpand {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* ============================================================================
+   4. INTERACTIVE "FROM IDEA TO SYSTEM" (ARCHITECTURE JOURNEY)
+   ============================================================================ */
+.abt-journey-section {
+  padding: 5rem 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 165, 116, 0.04) 0%, transparent 75%);
+}
+
+.journey-interactive-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.journey-pipeline-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  background: #11161D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+}
+
+.journey-step-node {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #9CA3AF;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.3s ease;
+  min-width: 110px;
+}
+
+.journey-step-node:hover,
+.journey-step-node.active {
+  background: rgba(212, 165, 116, 0.12);
+  border-color: rgba(212, 165, 116, 0.35);
+  color: #F5F1EA;
+  transform: translateY(-2px);
+}
+
+.journey-step-node.active {
+  box-shadow: 0 4px 15px rgba(212, 165, 116, 0.2);
+}
+
+.step-num {
+  color: #D4A574;
+  font-size: 0.7rem;
+  font-family: monospace;
+}
+
+.step-icon {
+  font-size: 1.4rem;
+}
+
+.step-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.pipeline-connector {
+  flex-grow: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  position: relative;
+  min-width: 15px;
+}
+
+.conn-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #D4A574;
+  opacity: 0.4;
+}
+
+.journey-stage-inspector {
+  background: #11161D;
+  border: 1px solid rgba(212, 165, 116, 0.25);
+  border-radius: 16px;
+  padding: 2.25rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.inspector-badge {
+  color: #D4A574;
+  font-size: 0.75rem;
+  font-family: monospace;
+  letter-spacing: 2px;
+  margin-bottom: 0.6rem;
+}
+
+.inspector-stage-title {
+  color: #F5F1EA;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 0.85rem;
+}
+
+.inspector-stage-title .sub {
+  color: #D4A574;
+  font-weight: 400;
+}
+
+.inspector-desc-quote {
+  color: #F5F1EA;
+  font-size: 1.15rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.inspector-details {
+  color: #9CA3AF;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.inspector-meta-row {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.meta-tag {
+  color: #D4A574;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ============================================================================
+   5. "WHAT POWERS SOFTIVAX" (INTERACTIVE OPERATING SYSTEM)
+   ============================================================================ */
+.abt-os-section {
+  padding: 5rem 0;
+}
+
+.os-cluster-canvas {
+  background: #11161D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.os-core-node {
+  text-align: center;
+  max-width: 280px;
+  margin: 0 auto 3rem;
+  background: radial-gradient(circle, rgba(212, 165, 116, 0.15) 0%, rgba(17, 22, 29, 0.95) 70%);
+  border: 1px solid #D4A574;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 0 30px rgba(212, 165, 116, 0.25);
+  position: relative;
+}
+
+.core-title {
+  color: #F5F1EA;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.core-subtitle {
+  color: #D4A574;
+  font-size: 0.75rem;
+  font-family: monospace;
+  letter-spacing: 3px;
+  margin-top: 0.3rem;
+}
+
+.os-satellites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.os-satellite-card {
+  background: #0B0F14;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.os-satellite-card:hover,
+.os-satellite-card.active {
+  background: rgba(212, 165, 116, 0.08);
+  border-color: #D4A574;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(212, 165, 116, 0.15);
+}
+
+.sat-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.sat-label {
+  color: #F5F1EA;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.sat-description {
+  color: #9CA3AF;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.os-terminal-card {
+  background: #0B0F14;
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: #0E1319;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.term-dot {
+  width: 8px;
+  height: 8px;
+  background: #D4A574;
+  border-radius: 50%;
+}
+
+.term-title {
+  color: #9CA3AF;
+  font-size: 0.78rem;
+  font-family: monospace;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+}
+
+.term-label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.term-icon { font-size: 1.2rem; }
+
+.term-name {
+  color: #D4A574;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.term-summary {
+  color: #F5F1EA;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.term-tags {
+  color: #9CA3AF;
+  font-size: 0.85rem;
+  font-family: monospace;
+}
+
+/* ============================================================================
+   6. THE "WHY" SECTION
+   ============================================================================ */
+.abt-why-section {
+  padding: 5rem 0;
+}
+
+.why-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 3.5rem;
+}
+
+.why-title {
+  color: #F5F1EA;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.why-statement-quote {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1.3;
+  color: #F5F1EA;
+}
+
+.why-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.why-card {
+  background: #11161D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.25rem;
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  border-color: rgba(212, 165, 116, 0.4);
+  transform: translateY(-4px);
+}
+
+.why-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.why-number {
+  color: #D4A574;
+  font-size: 1.1rem;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.why-card-title {
+  color: #F5F1EA;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.why-subtitle {
+  color: #D4A574;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 0.85rem;
+}
+
+.why-desc {
+  color: #9CA3AF;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ============================================================================
+   7. SIGNATURE VISUAL SECTION
+   ============================================================================ */
+.abt-signature-section {
+  padding: 4rem 0;
+}
+
+.signature-card {
+  background: linear-gradient(135deg, #0B0F14 0%, #11161D 100%);
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  border-radius: 20px;
+  padding: 4rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.sig-badge {
+  color: #D4A574;
+  font-size: 0.75rem;
+  font-family: monospace;
+  letter-spacing: 2px;
+  margin-bottom: 1.25rem;
+}
+
+.sig-headline {
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: #F5F1EA;
+  margin-bottom: 1.25rem;
+}
+
+.gold-gradient {
+  color: #D4A574;
+  background: linear-gradient(135deg, #F5F1EA 0%, #D4A574 60%, #B88652 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sig-text {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  color: #9CA3AF;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+.sig-telemetry-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sig-tel-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+.tel-dot {
+  width: 6px;
+  height: 6px;
+  background: #10B981;
+  border-radius: 50%;
+}
+
+.tel-label { color: #6B7280; }
+.tel-val { color: #D4A574; font-weight: 600; }
+
+/* ============================================================================
+   8. FINAL CTA
+   ============================================================================ */
+.abt-cta-section {
+  padding: 4rem 0 2rem;
+}
+
+.abt-cta-card {
+  background: #11161D;
+  border: 1px solid rgba(212, 165, 116, 0.25);
+  border-radius: 20px;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.abt-cta-heading {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: #F5F1EA;
+  margin-bottom: 1rem;
+}
+
+.abt-cta-paragraph {
+  color: #9CA3AF;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  max-width: 680px;
+  margin: 0 auto 2.25rem;
+}
+
+.abt-cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* ============================================================================
+   MEDIA QUERIES
+   ============================================================================ */
+@media (max-width: 1024px) {
+  .abt-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .philosophy-panels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .os-satellites-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-content {
+    flex-direction: column;
+  }
+
+  .showcase-divider-flow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .os-satellites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .abt-cta-buttons,
+  .abt-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-hero {
+    width: 100%;
+    justify-content: center;
+  }
+}

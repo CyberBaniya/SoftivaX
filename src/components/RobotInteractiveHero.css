@@ -1,0 +1,276 @@
+.robot-interactive-container {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  user-select: none;
+  overflow: hidden;
+}
+
+/* Background Depth Layer */
+.robot-bg-depth-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  transition: transform 0.15s ease-out;
+}
+
+.bg-cyan-horizon-glow {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(7, 21, 37, 0) 70%);
+  filter: blur(45px);
+}
+
+.bg-floor-reflective-line {
+  position: absolute;
+  bottom: 8%;
+  right: 5%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.4), rgba(212, 165, 116, 0.2), transparent);
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+}
+
+/* 3D Robot Stage & Image Frame */
+.robot-3d-stage {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 500px;
+  z-index: 2;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.robot-image-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.approved-robot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  filter: brightness(1.02) contrast(1.05);
+}
+
+/* Emissive Overlay Lights */
+.emissive-overlay-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.glow-blue-visor {
+  position: absolute;
+  top: 13%;
+  right: 32%;
+  width: 36px;
+  height: 12px;
+  background: rgba(96, 165, 250, 0.85);
+  border-radius: 50%;
+  filter: blur(4px);
+  box-shadow: 0 0 20px #60A5FA, 0 0 40px #3B82F6;
+  mix-blend-mode: screen;
+}
+
+.glow-blue-core {
+  position: absolute;
+  top: 48%;
+  right: 36%;
+  width: 22px;
+  height: 22px;
+  background: rgba(96, 165, 250, 0.9);
+  border-radius: 50%;
+  filter: blur(5px);
+  box-shadow: 0 0 25px #60A5FA, 0 0 50px #3B82F6;
+  mix-blend-mode: screen;
+}
+
+.glow-red-collar {
+  position: absolute;
+  top: 28%;
+  right: 33%;
+  width: 16px;
+  height: 6px;
+  background: rgba(239, 68, 68, 0.85);
+  border-radius: 4px;
+  filter: blur(3px);
+  box-shadow: 0 0 12px #EF4444;
+  mix-blend-mode: screen;
+}
+
+.glow-red-shoulder {
+  position: absolute;
+  top: 36%;
+  right: 22%;
+  width: 13px;
+  height: 13px;
+  background: rgba(239, 68, 68, 0.85);
+  border-radius: 50%;
+  filter: blur(4px);
+  box-shadow: 0 0 15px #EF4444;
+  mix-blend-mode: screen;
+}
+
+.glow-red-ribs {
+  position: absolute;
+  top: 54%;
+  right: 30%;
+  width: 11px;
+  height: 11px;
+  background: rgba(239, 68, 68, 0.8);
+  border-radius: 50%;
+  filter: blur(4px);
+  box-shadow: 0 0 12px #EF4444;
+  mix-blend-mode: screen;
+}
+
+.metallic-glare-sweep {
+  position: absolute;
+  top: 20%;
+  right: 25%;
+  width: 110px;
+  height: 110px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  filter: blur(8px);
+  mix-blend-mode: overlay;
+  transition: transform 0.2s ease-out;
+}
+
+.robot-contact-shadow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 25px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, rgba(5, 8, 13, 0) 75%);
+  filter: blur(10px);
+  z-index: 1;
+}
+
+/* Floating HUD Glass Panels */
+.robot-hud-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hud-panel-card {
+  position: absolute;
+  pointer-events: auto;
+  background: rgba(7, 21, 37, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(96, 165, 250, 0.08);
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hud-panel-card:hover {
+  border-color: #60A5FA;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(96, 165, 250, 0.25);
+  transform: scale(1.05) translateZ(10px) !important;
+}
+
+.hud-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60A5FA;
+  width: 20px;
+  height: 20px;
+}
+
+.hud-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.hud-label-text {
+  color: #F5F1EA;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.hud-corner-accent {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #D4A574;
+  border-right: 2px solid #D4A574;
+  border-top-right-radius: 3px;
+}
+
+.hud-ai-systems { border-color: rgba(96, 165, 250, 0.3); }
+.hud-automation { border-color: rgba(96, 165, 250, 0.3); }
+.hud-software { border-color: rgba(212, 165, 116, 0.3); }
+.hud-cloud { border-color: rgba(96, 165, 250, 0.3); }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .robot-interactive-container {
+    height: 440px;
+  }
+  
+  .robot-3d-stage {
+    max-width: 420px;
+    height: 440px;
+  }
+}
+
+@media (max-width: 768px) {
+  .robot-interactive-container {
+    height: 360px;
+  }
+  
+  .robot-3d-stage {
+    max-width: 340px;
+    height: 360px;
+  }
+  
+  .hud-panel-card {
+    padding: 0.4rem 0.75rem;
+  }
+  
+  .hud-label-text {
+    font-size: 0.65rem;
+  }
+}

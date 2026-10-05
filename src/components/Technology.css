@@ -1,0 +1,250 @@
+.technology-section {
+  position: relative;
+  width: 100%;
+  background-color: #0B0F14;
+  padding: 4.5rem 0;
+  z-index: 1;
+}
+
+.technology-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.technology-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.technology-left {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.technology-left.animate-up,
+.technology-right.animate-up,
+.tech-footer.animate-up {
+  animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.tech-ecosystem.animate-fade {
+  animation: simpleFade 0.7s ease-out forwards;
+}
+
+@keyframes slideUpFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes simpleFade {
+  to { opacity: 1; }
+}
+
+.tech-eyebrow {
+  color: #D4A574;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.tech-headline {
+  color: #F5F1EA;
+  font-size: clamp(30px, 3.8vw, 46px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+.tech-paragraph {
+  color: #9CA3AF;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 400;
+  margin-bottom: 1.75rem;
+}
+
+/* Code Console Box */
+.tech-code-box {
+  width: 100%;
+  background: #11161D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.code-box-header {
+  height: 32px;
+  background: rgba(18, 24, 33, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.85rem;
+}
+
+.code-box-filename {
+  color: #9CA3AF;
+  font-size: 0.7rem;
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}
+
+.code-box-body {
+  padding: 1.1rem 1.25rem;
+  margin: 0;
+  color: #D4A574;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  background: #0B0F14;
+}
+
+/* Right Column */
+.technology-right {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tech-row {
+  background: #11161D;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tech-row:hover,
+.tech-row.active {
+  border-color: rgba(212, 165, 116, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tech-row-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tech-row-num {
+  color: #9CA3AF;
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tech-row.active .tech-row-num {
+  color: #D4A574;
+}
+
+.tech-row-main {
+  flex-grow: 1;
+}
+
+.tech-row-title {
+  color: #F5F1EA;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.5px;
+}
+
+.tech-row-keywords {
+  color: #9CA3AF;
+  font-size: 0.78rem;
+}
+
+.tech-row-arrow {
+  color: #9CA3AF;
+  font-size: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-row.active .tech-row-arrow {
+  transform: translateX(4px);
+  color: #D4A574;
+}
+
+/* Ecosystem Bar */
+.tech-ecosystem {
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.75rem;
+  background: rgba(17, 22, 29, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+}
+
+.eco-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.eco-item {
+  display: flex;
+  align-items: center;
+}
+
+.eco-label {
+  color: #F5F1EA;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.eco-line {
+  height: 1px;
+  width: 25px;
+  background: rgba(212, 165, 116, 0.3);
+}
+
+/* Footer */
+.tech-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.tech-footer-statement {
+  color: #9CA3AF;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .technology-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .technology-section {
+    padding: 3.5rem 0;
+  }
+  
+  .eco-line {
+    display: none;
+  }
+}

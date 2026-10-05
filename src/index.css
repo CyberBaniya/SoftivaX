@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  background-color: #0B0F14;
+  color: #F5F1EA;
+
+  font-synthesize: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root,
+.app-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #0B0F14;
+  min-height: 100vh;
+}
+
+/* --- GLOBAL BUTTON SYSTEM --- */
+
+.btn-primary-new {
+  background: #D4A574;
+  color: #0B0F14;
+  border: 1px solid #D4A574;
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 165, 116, 0.15);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary-new:hover {
+  background: #E8B986;
+  border-color: #E8B986;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 165, 116, 0.25);
+  color: #0B0F14;
+}
+
+.btn-secondary-new {
+  background: transparent;
+  color: #F5F1EA;
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-secondary-new:hover {
+  background: rgba(212, 165, 116, 0.08);
+  border-color: rgba(212, 165, 116, 0.6);
+  transform: translateY(-2px);
+  color: #D4A574;
+}
+
+.btn-link-new {
+  background: transparent;
+  color: #D4A574;
+  border: none;
+  padding: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-link-new:hover {
+  color: #F5F1EA;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.btn-primary-new:hover .arrow-icon,
+.btn-secondary-new:hover .arrow-icon,
+.btn-link-new:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.cta-group-center {
+  justify-content: center;
+  margin-top: 2.5rem;
+}
